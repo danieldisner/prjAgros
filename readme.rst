@@ -16,10 +16,54 @@ Este é um projeto de controle de produtores e produção rural, desenvolvido em
 
 O projeto foi inicialmente projetado para usar o MySQL como banco de dados, mas pode ser adaptado para outros sistemas de gerenciamento de banco de dados, se necessário. A estrutura do banco de dados foi projetada com as seguintes tabelas principais:
 
-- `produtores`: Armazena informações sobre os produtores rurais.
-- `propriedades`: Registra dados sobre as propriedades e terras dos produtores.
-- `cultivos`: Controla informações sobre os cultivos realizados nas propriedades.
-- `colheitas`: Registra os detalhes das colheitas e da produção.
+- `grupousuario`: Armazena informações sobre grupos de usuários, como nome e descrição.
+
+- `menu`: Registra detalhes sobre itens de menu, incluindo nome, categoria e descrição.
+
+- `autorizacao`: Controla a autorização de grupos de usuários para acessar menus específicos.
+
+- `municipio`: Armazena informações sobre municípios, incluindo nome e UF.
+
+- `empresa`: Contém detalhes sobre empresas, como razão social, CNPJ e informações de contato.
+
+- `tecnico`: Registra informações sobre técnicos de empresas, incluindo nome e função.
+
+- `usuario`: Armazena informações de usuários, como nome, grupo, e-mail e informações de login.
+
+- `tipo_imovel`: Contém tipos de imóveis.
+
+- `grupo_especie`: Registra grupos de espécies.
+
+- `especie_semovente`: Armazena informações sobre espécies semoventes.
+
+- `especie_imovel`, `especie_movel`: Registram espécies relacionadas a imóveis e bens móveis.
+
+- `finalidade_semovente`: Contém informações sobre finalidades de espécies semoventes.
+
+- `raca`: Registra raças de espécies.
+
+- `situacao_propriedade`, `estado_conservacao`, `gravame`: Tabelas de referência para várias situações.
+
+- `tipo_cultivo`, `benfeitoria`, `agencia`, `produtos_agricola`, `atividade_pecuaria`: Tabelas de referência para tipos, atividades e recursos.
+
+- `cliente`: Contém informações sobre clientes, incluindo detalhes de contato.
+
+- `imoveis`: Armazena dados sobre imóveis, como tipo, área e localização.
+
+- `imovel_solo`, `imovel_proprietario`, `imovel_benfeitoria`, `imovel_explorado_agricola`, `imovel_explorado_pecuaria`: Tabelas relacionadas a imóveis.
+
+- `exploracao_agricola`, `produtos_secundarios_exploracao_pecuaria`, `exploracao_pecuaria`: Tabelas relacionadas a atividades agrícolas e pecuárias.
+
+- `semoventes`: Contém informações sobre espécies semoventes.
+
+- `moveis`: Armazena informações sobre bens móveis.
+
+- `operacoes`: Registra informações sobre operações financeiras.
+
+- `acao`: Controla ações relacionadas a menus.
+
+- `logusuario`: Registra logs de ações de usuários.
+
 
 ## Como Usar
 
