@@ -1,3 +1,45 @@
+
+## Descrição
+
+Este é um projeto de controle de produtores e produção rural, desenvolvido em CodeIgniter 3.0.6. O objetivo principal deste projeto é fornecer uma solução simples e acessível para o gerenciamento de informações relacionadas à agricultura e produtores rurais.
+
+**Nota:** Este projeto é um projeto antigo, e a interface pode parecer um pouco datada. No entanto, foi projetado com a simplicidade e a facilidade de compreensão em mente, tornando-o adequado para iniciantes e para fins de estudo.
+
+## Funcionalidades
+
+- Cadastro de Produtores Rurais
+- Registro de Propriedades e Cultivos
+- Controle de Colheitas e Produção
+- Relatórios de Produção e Desempenho
+
+## Estrutura do Banco de Dados
+
+O projeto foi inicialmente projetado para usar o MySQL como banco de dados, mas pode ser adaptado para outros sistemas de gerenciamento de banco de dados, se necessário. A estrutura do banco de dados foi projetada com as seguintes tabelas principais:
+
+- `produtores`: Armazena informações sobre os produtores rurais.
+- `propriedades`: Registra dados sobre as propriedades e terras dos produtores.
+- `cultivos`: Controla informações sobre os cultivos realizados nas propriedades.
+- `colheitas`: Registra os detalhes das colheitas e da produção.
+
+## Como Usar
+
+1. Clone este repositório para o seu ambiente local:
+
+https://github.com/danieldisner/prjAgros.git
+
+2. Configure o ambiente CodeIgniter conforme necessário.
+
+3. Importe a estrutura do banco de dados para o seu sistema de gerenciamento de banco de dados (MySQL, por padrão).
+
+4. Configure as informações de conexão com o banco de dados no arquivo `application/config/database.php`.
+
+5. Execute o projeto localmente e comece a usá-lo para gerenciar produtores e produção rural.
+
+## Contribuição
+
+Este projeto é de código aberto, e você é encorajado a contribuir para seu desenvolvimento e melhorias. Sinta-se à vontade para enviar problemas (issues) e pull requests com novos recursos, correções de bugs ou melhorias na interface.
+
+
 ###################
 What is CodeIgniter
 ###################
