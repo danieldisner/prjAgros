@@ -21,10 +21,10 @@ class RecuperarSenha extends CI_Controller{
         // Verifica se encontrou o usuário
         if($usuario->num_rows() > 0){
             // Configurações dos emails
-            $mailConfig['smtp_host'] = 'ssl://br486.hostgator.com.br';
+            $mailConfig['smtp_host'] = '';
             $mailConfig['smtp_port'] = 465;
-            $mailConfig['smtp_user'] = 'agrossis@disnerdev.com.br';
-            $mailConfig['smtp_pass'] = 'agrossis741';
+            $mailConfig['smtp_user'] = '';
+            $mailConfig['smtp_pass'] = '';
             $mailConfig['protocol']  = 'smtp';
             $mailConfig['validate']  = TRUE;
             $mailConfig['mailtype']  = 'html';
@@ -34,7 +34,7 @@ class RecuperarSenha extends CI_Controller{
             // Inicializa as configurações do e-mail
             $this->email->initialize($mailConfig);
 
-            $this->email->from('agrossis@disnerdev.com.br', 'Suporte Agrosis');
+            $this->email->from('', 'Suporte Agrosis');
             $this->email->subject('Redefinição de Senha - Sistema AGROS (não responda)');
             // Colocar o e-mail recebido por post:
             $this->email->to($this->input->post('email'));

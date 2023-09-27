@@ -18,10 +18,10 @@ class Principal extends CI_Controller{
         $this->load->library('email');
 
         // Configurações dos emails
-        $mailConfig['smtp_host'] = 'ssl://br486.hostgator.com.br';
+        $mailConfig['smtp_host'] = '';
         $mailConfig['smtp_port'] = 465;
-        $mailConfig['smtp_user'] = 'agrossis@disnerdev.com.br';
-        $mailConfig['smtp_pass'] = 'agrossis741';
+        $mailConfig['smtp_user'] = '';
+        $mailConfig['smtp_pass'] = '';
         $mailConfig['protocol']  = 'smtp';
         $mailConfig['validate']  = TRUE;
         $mailConfig['mailtype']  = 'html';
@@ -31,10 +31,10 @@ class Principal extends CI_Controller{
         // Inicializa as configurações do e-mail
         $this->email->initialize($mailConfig);
 
-        $this->email->from('agrossis@disnerdev.com.br', 'Suporte Agrosis');
+        $this->email->from('', 'Suporte Agrosis');
         $this->email->subject('Contato através do Site - Sistema AGROS (não responda)');
         // Envia para o próprio email de contato
-        $this->email->to('agrossis@disnerdev.com.br');
+        $this->email->to('');
 
         $mensagemEmail = 'Contato através do Site.<br/><br/>';
         $mensagemEmail .= 'Nome: '. $this->input->post('nome'). '<br/>';
