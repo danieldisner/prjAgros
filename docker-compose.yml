@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+    web:
+      container_name: web
+      build:
+        context: .
+        dockerfile: Dockerfile
+      depends_on:
+        - db
+      volumes:
+        - .:/var/www/html/
+      ports:
+        - 80:80
+    db:
+      container_name: db
+      image: mysql
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        MYSQL_DATABASE: ${MYSQL_DATABASE}
+        MYSQL_USER: ${MYSQL_USER}
+        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      ports:
+        - "9906:3306"
+      volumes:
+        - ./database_schema.sql:/docker-entrypoint-initdb.d/database_schema.sql
